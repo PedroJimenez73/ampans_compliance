@@ -1,0 +1,34 @@
+<div appScroll class="contenedor condicional">
+    <div class="row">
+        <div class="col-100">
+            <p>Abans de seguir llegint el present document caldria que llegissis el codi d’ètica d’AMPANS.</p>
+            <p class="instructions" style="text-align: center;">Prem en el següent botó i llegeix detingudament el mateix.</p>
+            <button *ngIf="!readed" class="mid" (click)="showModal()">LLEGIR EL CODI D’ÈTICA</button>
+            <div style="display: flex; justify-content: center;">   
+                <span *ngIf="readed" class="pass">Ara ja pot continuar a la següent pantalla prement a Següent</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div #overlay class="reader-overlay"></div>
+<div #close class="close-modal">
+    <img (click)="closeModal()" src="assets/img/iconos/x.svg" alt="">
+</div>
+<div #modal class="reader-modal">
+    <p class="instructions">Obri amb el ratolí per llegir tot el document, a l'acabar es mostrarà un botó que haurà de prémer per confirmar que l'ha llegit.</p>
+    <img src="assets/img/codi/codi_1.png" alt="">
+    <img src="assets/img/codi/codi_2.png" alt="">
+    <img src="assets/img/codi/codi_3.png" alt="">
+    <img src="assets/img/codi/codi_4.png" alt="">
+    <img src="assets/img/codi/codi_5.png" alt="">
+    <img src="assets/img/codi/codi_6.png" alt="">
+    <img src="assets/img/codi/codi_7.png" alt="">
+    <img src="assets/img/codi/codi_8.png" alt="">
+    <img src="assets/img/codi/codi_9.png" alt="">
+    <img src="assets/img/codi/codi_10.png" alt="">
+    <img src="assets/img/codi/codi_11.png" alt="">
+    <img src="assets/img/codi/codi_12.png" alt="">
+    <img src="assets/img/codi/codi_13.png" alt="">
+    <img src="assets/img/codi/codi_14.png" alt="">
+    <button type="button" style="display: block; margin: 20px auto;" (click)="setReaded()">HE LLEGIT EL CODI D’ÈTICA AMPANS</button>
+</div>
