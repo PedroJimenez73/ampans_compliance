@@ -23,13 +23,16 @@ export class Diapo15Component implements OnInit {
     elementosInputsRef = [];
 
     pregunta = {
-        id: '1',
-        question: 'El coronavirus s’origina a Xina?',
+        id: '7',
+        question: 'Mantenir relacions sexuals esporàdiques amb una persona amb discapacitat intel·lectual incapacitada.',
         answers: [
-            'Sí',
-            'No'
+            'Penal o Dubte ètic (cal consultar)',
+            'Correcte'
         ],
-        corrects: ['a']
+        corrects: ['a'],
+        feedback: [
+            'Podria constituir un delicte penal.'
+        ]
     }
 
     constructor(private ff: FormBuilder,

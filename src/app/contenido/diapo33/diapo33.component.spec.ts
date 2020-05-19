@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Diapo13bisComponent } from './diapo13bis.component';
+import { Diapo33Component } from './diapo33.component';
 
-describe('Diapo13bisComponent', () => {
-  let component: Diapo13bisComponent;
-  let fixture: ComponentFixture<Diapo13bisComponent>;
+describe('Diapo33Component', () => {
+  let component: Diapo33Component;
+  let fixture: ComponentFixture<Diapo33Component>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ Diapo13bisComponent ]
+      declarations: [ Diapo33Component ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Diapo13bisComponent);
+    fixture = TestBed.createComponent(Diapo33Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

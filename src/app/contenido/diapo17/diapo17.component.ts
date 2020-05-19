@@ -9,6 +9,7 @@ declare var $: any;
   templateUrl: './diapo17.component.html',
   styleUrls: ['./diapo17.component.scss']
 })
+
 export class Diapo17Component implements OnInit {
 
     showMensaje = false;
@@ -23,13 +24,16 @@ export class Diapo17Component implements OnInit {
     elementosInputsRef = [];
 
     pregunta = {
-        id: '3',
-        question: 'El coronavirus es transmet per contacte directe de secrecions respiratòries amb forma de gotes molt petites?',
+        id: '9',
+        question: 'Permetre que grups d’usuaris mantinguin relacions sexuals en grup consentides.',
         answers: [
-            'Sí',
-            'No'
+            'Penal o Dubte ètic (cal consultar)',
+            'Correcte'
         ],
-        corrects: ['a']
+        corrects: ['a'],
+        feedback: [
+            'Probablement no hi ha cap risc penal si les persones són majors d’edat. Però davant el coneixement de relacions sexuals en grup consentides cal informar a AMPANS i valorar com s’actua. Cal una reflexió ètica.'
+        ]
     }
 
     constructor(private ff: FormBuilder,
@@ -38,9 +42,9 @@ export class Diapo17Component implements OnInit {
 
     ngOnInit() {
         const scrollToTop = window.setInterval(() => {
-        const pos = window.pageYOffset;
+            const pos = window.pageYOffset;
             if (pos > 0) {
-                window.scrollTo(0, pos - 20); 
+                window.scrollTo(0, pos - 20);
             } else {
                 window.clearInterval(scrollToTop);
             }

@@ -9,6 +9,7 @@ declare var $: any;
   templateUrl: './diapo20.component.html',
   styleUrls: ['./diapo20.component.scss']
 })
+
 export class Diapo20Component implements OnInit {
 
     showMensaje = false;
@@ -23,13 +24,16 @@ export class Diapo20Component implements OnInit {
     elementosInputsRef = [];
 
     pregunta = {
-        id: '6',
-        question: 'Les principals bones pràctiques per a prevenir el contagi del coronavirus són mantenir la distància de seguretat i rentar-se les mans sovint?',
+        id: '12',
+        question: 'Anar a una platja nudista amb persones amb discapacitat i fer nudisme tots.',
         answers: [
-            'Sí',
-            'No'
+            'Penal o Dubte ètic (cal consultar)',
+            'Correcte'
         ],
-        corrects: ['a']
+        corrects: ['a'],
+        feedback: [
+            'Independent de si les persones ho volen o estan o no incapacitades, el principi de prudència ens indica que cal reflexionar-ho dins AMPANS abans de portar-ho a terme.'
+        ]
     }
 
     constructor(private ff: FormBuilder,
@@ -37,6 +41,14 @@ export class Diapo20Component implements OnInit {
                 private scormStoreService: ScormStoreService) { }
 
     ngOnInit() {
+        const scrollToTop = window.setInterval(() => {
+            const pos = window.pageYOffset;
+            if (pos > 0) {
+                window.scrollTo(0, pos - 20);
+            } else {
+                window.clearInterval(scrollToTop);
+            }
+        }, 16);
         this.form = this.ff.group({
             answerRadio: ''
         });
@@ -48,14 +60,6 @@ export class Diapo20Component implements OnInit {
     }
 
     checkAnswer() {
-        const scrollToTop = window.setInterval(() => {
-        const pos = window.pageYOffset;
-            if (pos > 0) {
-                window.scrollTo(0, pos - 20); 
-            } else {
-                window.clearInterval(scrollToTop);
-            }
-        }, 16);
         this.showMensaje = true;
         this.lockInput = true;
         this.answersChecked[0] = this.form.get('answerRadio').value;

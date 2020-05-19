@@ -1,118 +1,41 @@
 <div appScroll class="contenedor condicional">
     <div class="row">
         <div class="col-100">
-            <div class="actividades mostrada">
-                <h3>Resum d’autoavaluació</h3>
+            <p class="instructions">A continuació has de completar 9 preguntes, sent necessari contestar correctament més de l'50% per passar a el següent conjunt de preguntes.</p>
+            <p>Marca si la conducta que es descriu és: un delicte penal o una conducta que comporta algun dubte ètic (que hauríem de consultar dins AMPANS) o si la conducta és correcte.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-100">
+            <div class="actividades mostrada" id="actividad-1">
+                <h3>{{pregunta.id}} {{pregunta.question}}</h3>
                 <hr>
-                <div style="display: flex; margin: 0; padding: 0;">
-                    <div class="col-50 columna">
-                        <div class="resultado">
-                            <span *ngIf="results[0]"><img src="assets/img/iconos/check-circle.svg"></span>
-                            <span *ngIf="!results[0]"><img src="assets/img/iconos/x-circle.svg"></span>
-                            <div>
-                                <p>PREGUNTA 1</p>
-                                <p *ngIf="results[0]">Correcta </p>
-                                <p *ngIf="!results[0]">Incorrecta </p>
-                            </div>
-                        </div>
-                        <div class="resultado">
-                            <span *ngIf="results[1]"><img src="assets/img/iconos/check-circle.svg"></span>
-                            <span *ngIf="!results[1]"><img src="assets/img/iconos/x-circle.svg"></span>
-                            <div>
-                                <p>PREGUNTA 2</p>
-                                <p *ngIf="results[1]">Correcta </p>
-                                <p *ngIf="!results[1]">Incorrecta </p>
-                            </div>
-                        </div>
-                        <div class="resultado">
-                            <span *ngIf="results[2]"><img src="assets/img/iconos/check-circle.svg"></span>
-                            <span *ngIf="!results[2]"><img src="assets/img/iconos/x-circle.svg"></span>
-                            <div>
-                                <p>PREGUNTA 3</p>
-                                <p *ngIf="results[2]">Correcta </p>
-                                <p *ngIf="!results[2]">Incorrecta </p>
-                            </div>
-                        </div>
-                        <div class="resultado">
-                            <span *ngIf="results[3]"><img src="assets/img/iconos/check-circle.svg"></span>
-                            <span *ngIf="!results[3]"><img src="assets/img/iconos/x-circle.svg"></span>
-                            <div>
-                                <p>PREGUNTA 4</p>
-                                <p *ngIf="results[3]">Correcta </p>
-                                <p *ngIf="!results[3]">Incorrecta </p>
-                            </div>
-                        </div>
-                        <div class="resultado">
-                            <span *ngIf="results[4]"><img src="assets/img/iconos/check-circle.svg"></span>
-                            <span *ngIf="!results[4]"><img src="assets/img/iconos/x-circle.svg"></span>
-                            <div>
-                                <p>PREGUNTA 5</p>
-                                <p *ngIf="results[4]">Correcta </p>
-                                <p *ngIf="!results[4]">Incorrecta </p>
-                            </div>
-                        </div>
-                        <div class="resultado">
-                            <span *ngIf="results[5]"><img src="assets/img/iconos/check-circle.svg"></span>
-                            <span *ngIf="!results[5]"><img src="assets/img/iconos/x-circle.svg"></span>
-                            <div>
-                                <p>PREGUNTA 6</p>
-                                <p *ngIf="results[5]">Correcta </p>
-                                <p *ngIf="!results[5]">Incorrecta </p>
-                            </div>
-                        </div>
-                        <div class="resultado">
-                            <span *ngIf="results[6]"><img src="assets/img/iconos/check-circle.svg"></span>
-                            <span *ngIf="!results[6]"><img src="assets/img/iconos/x-circle.svg"></span>
-                            <div>
-                                <p>PREGUNTA 7</p>
-                                <p *ngIf="results[6]">Correcta </p>
-                                <p *ngIf="!results[6]">Incorrecta </p>
-                            </div>
-                        </div>
-                        <div class="resultado">
-                            <span *ngIf="results[7]"><img src="assets/img/iconos/check-circle.svg"></span>
-                            <span *ngIf="!results[7]"><img src="assets/img/iconos/x-circle.svg"></span>
-                            <div>
-                                <p>PREGUNTA 8</p>
-                                <p *ngIf="results[7]">Correcta </p>
-                                <p *ngIf="!results[7]">Incorrecta </p>
-                            </div>
-                        </div>
-                        <div class="resultado">
-                            <span *ngIf="results[8]"><img src="assets/img/iconos/check-circle.svg"></span>
-                            <span *ngIf="!results[8]"><img src="assets/img/iconos/x-circle.svg"></span>
-                            <div>
-                                <p>PREGUNTA 9</p>
-                                <p *ngIf="results[8]">Correcta </p>
-                                <p *ngIf="!results[8]">Incorrecta </p>
-                            </div>
-                        </div>
-                        <div class="resultado">
-                            <span *ngIf="results[9]"><img src="assets/img/iconos/check-circle.svg"></span>
-                            <span *ngIf="!results[9]"><img src="assets/img/iconos/x-circle.svg"></span>
-                            <div>
-                                <p>PREGUNTA 10</p>
-                                <p *ngIf="results[9]">Correcta </p>
-                                <p *ngIf="!results[9]">Incorrecta </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-50 doble-centrada">
-                        <canvas baseChart
-                                [data]="doughnutChartData"
-                                [labels]="doughnutChartLabels"
-                                [options]="doughnutChartOptions"
-                                [chartType]="doughnutChartType"
-                                [colors]="doughnutChartColors">
-                        </canvas>
-                    </div>
+                <form [formGroup]="form">
+                    <label #labelsRef class="respuesta" *ngFor="let answer of pregunta.answers; let i = index">
+                        <input #inputsRef class="m-r-small" type="radio" formControlName="answerRadio" value="{{abcAnswers[i]}}">
+                            {{abcAnswers[i]}}. {{answer}} 
+                            <img class="incorrecta" src="assets/img/iconos/x-circle.svg" alt="">
+                            <img class="correcta" src="assets/img/iconos/check-circle.svg" alt="">
+                    </label>
+                </form>
+                <div class="col-100" style="margin-top: 1rem; display: flex; justify-content: center;">
+                    <span *ngIf="showMensaje && result === true" class="mensaje verdadero">La resposta és correcta, continua a la següent!</span>
+                    <span *ngIf="showMensaje && result === false" class="mensaje falso">Ho sentim, la resposta no és correcta, continua a la següent.</span>
+                    <button *ngIf="!showMensaje" class="outline" (click)="setAnswer()">Comprovar resposta</button>
                 </div>
-                <div class="mensaje-final">
-                    <p class="pass" *ngIf="pass">{{mensaje}}</p>
-                    <p class="not-pass" *ngIf="!pass">{{mensaje}}</p>
-                    <button *ngIf="!pass" class="outline" (click)="reset()">Repassar</button>
+                <hr>
+                <div *ngIf="showMensaje" class="col-100">
+                    <p *ngFor="let linea of pregunta.feedback">{{linea}}</p>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<div class="overlay" id="overlay"></div>
+<div id="modal-resume">
+    <span (click)="toggleResumeModal()">&times;</span>
+    <p>Has de completar l'activitat i prémer en comprovar resposta abans d'accedir a la següent activitat.</p>
+    <div>
+        <button (click)="toggleResumeModal()">Acceptar</button>
     </div>
 </div>

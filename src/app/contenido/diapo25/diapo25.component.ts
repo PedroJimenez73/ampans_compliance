@@ -1,82 +1,115 @@
-import { Component, OnInit } from '@angular/core';
-import { ChartType, ChartOptions } from 'chart.js';
-import { MultiDataSet, Label } from 'ng2-charts';
+import { Component, OnInit, ViewChildren, QueryList, ElementRef, ChangeDetectorRef } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 import { ScormStoreService } from 'src/app/servicios/scorm-store.service';
+
+declare var $: any;
 
 @Component({
   selector: 'app-diapo25',
   templateUrl: './diapo25.component.html',
   styleUrls: ['./diapo25.component.scss']
 })
+
 export class Diapo25Component implements OnInit {
 
-    results = [];
-    totalAciertos = 0;
-    porcentAciertos = 0;
-    doughnutChartLabels: Label[];
-    doughnutChartData: MultiDataSet;
-    doughnutChartType: ChartType = 'doughnut';
-    doughnutChartOptions: ChartOptions = {
-        responsive: true,
-        legend: {
-        display: false
-        },
+    showMensaje = false;
+    lockInput = false;
+    form: FormGroup;
+    abcAnswers = ['a','b','c','d','e','f','g','h','i','j'];
+    answersChecked = [];
+    result: boolean;
+    @ViewChildren('labelsRef') labelsRef: QueryList<ElementRef>;
+    elementosLabelsRef = [];
+    @ViewChildren('inputsRef') inputsRef: QueryList<ElementRef>;
+    elementosInputsRef = [];
+
+    pregunta = {
+        id: '16',
+        question: 'Immobilitzar a una persona amb discapacitat adulta amb cinxes de contenció davant una conducta molt agressiva.',
+        answers: [
+            'Penal o Dubte ètic (cal consultar)',
+            'Correcte'
+        ],
+        corrects: ['b'],
+        feedback: [
+            'L’actual legislació permet la contenció física amb cinxes davant una conducta molt agressiva. La contenció pot comportar hi està comportant un debat ètic  dins moltes organitzacions.',
+            'El processos i procediments d’AMPANS contemplen la contenció física sempre que aquesta: sigui el darrer recurs, es faci amb total professionalitat, s’apliqui durant el temps mínim, no es posi en perill la seguretat de la persona i s’estableixin tots els controls que siguin necessaris. Sempre que sigui possible es disposarà de prescripcions mediques de contenció.'
+        ]
     }
-    doughnutChartColors = [];
-    mensaje: string;
-    pass = false;
-    
-    constructor(private scormStoreService: ScormStoreService) { }
+
+    constructor(private ff: FormBuilder,
+                private cd: ChangeDetectorRef,
+                private scormStoreService: ScormStoreService) { }
 
     ngOnInit() {
         const scrollToTop = window.setInterval(() => {
-        const pos = window.pageYOffset;
+            const pos = window.pageYOffset;
             if (pos > 0) {
-                window.scrollTo(0, pos - 20); 
+                window.scrollTo(0, pos - 20);
             } else {
                 window.clearInterval(scrollToTop);
             }
         }, 16);
-        for (let i = 0; i < 10; i ++) {
-            this.results.push(this.scormStoreService.getResults()[i].result)
-        }
-        this.results.forEach(elem => {
-            if(elem) {
-                this.totalAciertos++;
-            }
+        this.form = this.ff.group({
+            answerRadio: ''
         });
-        this.porcentAciertos = Math.round((this.totalAciertos / this.results.length) * 100);
-        this.loadChartResultados();
-        if (this.totalAciertos < (this.results.length * 0.8)) {
-            this.pass = false;
-			this.mensaje = 'Ho sentim, no has superat les activitats. Pots prémer repassar per estudiar de nou i tornar a contestar les preguntes.';
-		} else {
-            this.pass = true;
-			this.mensaje = 'Enhorabona, has superat les activitats! Prem sortir per finalitzar.';
-		}
-    }
-    
-    loadChartResultados() {
-        let resto = 100 - this.porcentAciertos;
-        let color;
-        if(this.porcentAciertos >= 80){
-            color = '#008489';
-        } else if (this.porcentAciertos >= 50){
-            color = '#ffb822';
-        } else {
-            color = '#8f0404';
+        if (this.scormStoreService.getAswersChecked(this.pregunta.id)) {
+            this.answersChecked = this.scormStoreService.getAswersChecked(this.pregunta.id)
+            this.form.get('answerRadio').patchValue(this.answersChecked[0],{emitEvent: false});
+            this.checkAnswer();
         }
-        this.doughnutChartLabels = ['% Correctas','% Incorrectas'];
-        this.doughnutChartData = [[this.porcentAciertos, resto ]];
-        this.doughnutChartColors = [
-            {
-                backgroundColor: [ color, 'lightgrey'],
-            },
-        ];
     }
 
-    reset() {
-        this.scormStoreService.reset();
+    checkAnswer() {
+        this.showMensaje = true;
+        this.lockInput = true;
+        this.answersChecked[0] = this.form.get('answerRadio').value;
+        if (this.answersChecked[0] === this.pregunta.corrects[0]) {
+            this.result = true;
+        } else {
+            this.result = false;
+        }
+        this.cd.detectChanges();
+        this.elementosInputsRef = [];
+        this.inputsRef.forEach(elem => {
+            this.elementosInputsRef.push(elem);
+        })
+        this.elementosInputsRef.forEach(elem => {
+            elem.nativeElement.disabled = true;
+        });
+        this.elementosLabelsRef = [];
+        this.labelsRef.forEach(elem => {
+            this.elementosLabelsRef.push(elem);
+        })
+        this.elementosLabelsRef.forEach(elem => {
+            elem.nativeElement.classList.remove('incorrecta');
+            elem.nativeElement.classList.remove('correcta');
+        });
+        let indexCorrecta = this.abcAnswers.indexOf(this.pregunta.corrects[0]);
+        let indexMarcada = this.abcAnswers.indexOf(this.answersChecked[0]);
+        if (indexCorrecta === indexMarcada) {
+            this.elementosLabelsRef[indexMarcada].nativeElement.classList.add('correcta');    
+        } else {
+            this.elementosLabelsRef[indexMarcada].nativeElement.classList.add('incorrecta');     
+        }
+    }
+
+    setAnswer() {
+        if (this.form.get('answerRadio').value !== '') {
+            this.checkAnswer();
+            this.scormStoreService.setResults(this.pregunta.id, this.answersChecked, this.result);
+        } else {
+            this.toggleResumeModal()
+        }
+    }
+
+    toggleResumeModal() {
+        $("#modal-resume").toggleClass("show");
+        $("#overlay").toggleClass("show");
+        setTimeout(function(){
+            $("#modal-resume").toggleClass("visible");
+            $("#overlay").toggleClass("visible");
+        }, 20);
     }
 
 }

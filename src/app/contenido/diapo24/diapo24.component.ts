@@ -1,8 +1,7 @@
-import { Component, OnInit, ViewChildren, QueryList, ElementRef, ChangeDetectorRef } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { ChartType, ChartOptions } from 'chart.js';
+import { MultiDataSet, Label } from 'ng2-charts';
 import { ScormStoreService } from 'src/app/servicios/scorm-store.service';
-
-declare var $: any;
 
 @Component({
   selector: 'app-diapo24',
@@ -11,100 +10,64 @@ declare var $: any;
 })
 export class Diapo24Component implements OnInit {
 
-    showMensaje = false;
-    lockInput = false;
-    form: FormGroup;
-    abcAnswers = ['a','b','c','d','e','f','g','h','i','j'];
-    answersChecked = [];
-    result: boolean;
-    @ViewChildren('labelsRef') labelsRef: QueryList<ElementRef>;
-    elementosLabelsRef = [];
-    @ViewChildren('inputsRef') inputsRef: QueryList<ElementRef>;
-    elementosInputsRef = [];
-
-    pregunta = {
-        id: '10',
-        question: 'Cal treure’ns els guants evitant tocar-nos les mans amb el guant brut i sempre rentar-nos les mans tot seguit?',
-        answers: [
-            'Sí',
-            'No'
-        ],
-        corrects: ['a']
+    results = [];
+    totalAciertos = 0;
+    porcentAciertos = 0;
+    doughnutChartLabels: Label[];
+    doughnutChartData: MultiDataSet;
+    doughnutChartType: ChartType = 'doughnut';
+    doughnutChartOptions: ChartOptions = {
+        responsive: true,
+        legend: {
+        display: false
+        },
     }
-
-    constructor(private ff: FormBuilder,
-                private cd: ChangeDetectorRef,
-                private scormStoreService: ScormStoreService) { }
+    doughnutChartColors = [];
+    mensaje: string;
+    timer: any;
+    
+    constructor(private scormStoreService: ScormStoreService) { 
+    }
 
     ngOnInit() {
-        const scrollToTop = window.setInterval(() => {
-        const pos = window.pageYOffset;
-            if (pos > 0) {
-                window.scrollTo(0, pos - 20); 
-            } else {
-                window.clearInterval(scrollToTop);
+        for (let i = 4; i < 15; i ++) {
+            this.results.push(this.scormStoreService.getResults()[i].result)
+        }
+        this.results.forEach(elem => {
+            if(elem) {
+                this.totalAciertos++;
             }
-        }, 16);
-        this.form = this.ff.group({
-            answerRadio: ''
         });
-        if (this.scormStoreService.getAswersChecked(this.pregunta.id)) {
-            this.answersChecked = this.scormStoreService.getAswersChecked(this.pregunta.id)
-            this.form.get('answerRadio').patchValue(this.answersChecked[0],{emitEvent: false});
-            this.checkAnswer();
-        }
+        this.porcentAciertos = Math.round((this.totalAciertos / this.results.length) * 100);
+        this.loadChartResultados();
+        if (this.porcentAciertos < 50) {
+			this.mensaje = 'Ho sentim, no has superat les activitats. Pots prémer en repassar per estudiar de nou i tornar a contestar les preguntes.';
+		} else if (this.porcentAciertos >= 50) {
+			this.mensaje = 'Enhorabona, has superat les activitats! Prem Següent per continuar.';
+		}
     }
 
-    checkAnswer() {
-        this.showMensaje = true;
-        this.lockInput = true;
-        this.answersChecked[0] = this.form.get('answerRadio').value;
-        if (this.answersChecked[0] === this.pregunta.corrects[0]) {
-            this.result = true;
+    loadChartResultados() {
+        let resto = 100 - this.porcentAciertos;
+        let color;
+        if(this.porcentAciertos >= 50){
+            color = '#008489';
+        } else if (this.porcentAciertos >= 25){
+            color = '#ffb822';
         } else {
-            this.result = false;
+            color = '#8f0404';
         }
-        this.cd.detectChanges();
-        this.elementosInputsRef = [];
-        this.inputsRef.forEach(elem => {
-            this.elementosInputsRef.push(elem);
-        })
-        this.elementosInputsRef.forEach(elem => {
-            elem.nativeElement.disabled = true;
-        });
-        this.elementosLabelsRef = [];
-        this.labelsRef.forEach(elem => {
-            this.elementosLabelsRef.push(elem);
-        })
-        this.elementosLabelsRef.forEach(elem => {
-            elem.nativeElement.classList.remove('incorrecta');
-            elem.nativeElement.classList.remove('correcta');
-        });
-        let indexCorrecta = this.abcAnswers.indexOf(this.pregunta.corrects[0]);
-        let indexMarcada = this.abcAnswers.indexOf(this.answersChecked[0]);
-        if (indexCorrecta === indexMarcada) {
-            this.elementosLabelsRef[indexMarcada].nativeElement.classList.add('correcta');    
-        } else {
-            this.elementosLabelsRef[indexMarcada].nativeElement.classList.add('incorrecta');     
-        }
+        this.doughnutChartLabels = ['% Correctas','% Incorrectas'];
+        this.doughnutChartData = [[this.porcentAciertos, resto ]];
+        this.doughnutChartColors = [
+            {
+                backgroundColor: [ color, 'lightgrey'],
+            },
+        ];
     }
 
-    setAnswer() {
-        if (this.form.get('answerRadio').value !== '') {
-            this.checkAnswer();
-            this.scormStoreService.setResults(this.pregunta.id, this.answersChecked, this.result);
-        } else {
-            this.toggleResumeModal()
-        }
-    }
-
-    toggleResumeModal() {
-        $("#modal-resume").toggleClass("show");
-        $("#overlay").toggleClass("show");
-        setTimeout(function(){
-            $("#modal-resume").toggleClass("visible");
-            $("#overlay").toggleClass("visible");
-        }, 20);
+    reset() {
+        this.scormStoreService.resetUnit2();
     }
 
 }

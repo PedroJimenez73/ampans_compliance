@@ -29,7 +29,7 @@ export class ScormStoreService {
         {text:"Exercicis generals",class:"regular", menu: false, question: true, page: null},
         {text:"Exercicis generals",class:"regular", menu: false, question: true, page: null}, 
         {text:"Resum d’exercicis generals",class:"regular", menu: true, question: true, page: null}, // 13
-        {text:"Exercicis d’activitat relatives  a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat", class:"regular", menu: true, question: true, page: null},
+        {text:"Exercicis d’activitat relatives  a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat", class:"regular", menu: true, question: true, page: null}, // 14
         {text:"Exercicis d’activitat relatives  a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat", class:"regular", menu: false, question: true, page: null},
         {text:"Exercicis d’activitat relatives  a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat", class:"regular", menu: false, question: true, page: null},
         {text:"Exercicis d’activitat relatives  a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat", class:"regular", menu: false, question: true, page: null},
@@ -40,9 +40,26 @@ export class ScormStoreService {
         {text:"Exercicis d’activitat relatives  a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat", class:"regular", menu: false, question: true, page: null},
         {text:"Exercicis d’activitat relatives  a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat", class:"regular", menu: false, question: true, page: null},
         {text:"Exercicis d’activitat relatives  a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat", class:"regular", menu: false, question: true, page: null},
-        {text:"Resum d’exercicis d’activitat relatives a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat",class:"regular", menu: true, question: true, page: null},
+        {text:"Resum d’exercicis d’activitat relatives a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat",class:"regular", menu: true, question: true, page: null}, // 25
+        {text:"Exercicis d’maltractament",class:"regular", menu: true, question: true, page: null}, // 26
         {text:"Exercicis d’maltractament",class:"regular", menu: false, question: true, page: null},
-        {text:"Resum d’autoavaluació",class:"regular", menu: true, question: false, page: null},
+        {text:"Exercicis d’maltractament",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis d’maltractament",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis d’maltractament",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis d’maltractament",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis d’maltractament",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis d’maltractament",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis d’maltractament",class:"regular", menu: false, question: true, page: null},
+        {text:"Resum d’exercicis d’maltractament",class:"regular", menu: true, question: true, page: null}, // 35
+        {text:"Exercicis d’violació de la intimitat i violació informàtica",class:"regular", menu: true, question: true, page: null}, // 36
+        {text:"Exercicis d’violació de la intimitat i violació informàtica",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis d’violació de la intimitat i violació informàtica",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis d’violació de la intimitat i violació informàtica",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis d’violació de la intimitat i violació informàtica",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis d’violació de la intimitat i violació informàtica",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis d’violació de la intimitat i violació informàtica",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis d’violació de la intimitat i violació informàtica",class:"regular", menu: false, question: true, page: null},
+        {text:"Resum d’exercicis d’violació de la intimitat i violació informàtica",class:"regular", menu: true, question: true, page: null}, // 44
     ];
 
     indexPantalla = 0;
@@ -205,14 +222,14 @@ export class ScormStoreService {
     }
 
     resetUnit2() {
-        for (let i = 16; i < 21; i++) {
+        for (let i = 14; i < 25; i++) {
             this.progress[i][1] = true;
         }
-        for (let i = 3; i < 7; i++) {
+        for (let i = 4; i < 15; i++) {
             this.results[i].answersChecked = null;
             this.results[i].result = false;
         }
-        this.navTo(11);
+        this.navTo(2);
         this.cmiStore.results = this.results;
         this.cmiStore.progress = this.progress;
         let cmiStoreStr = JSON.stringify(this.cmiStore);
@@ -235,19 +252,19 @@ export class ScormStoreService {
     }
 
     passUnit2() {
-        this.progress[20][1] = false;
+        this.progress[25][1] = false;
         this.stateIn.next({menu: this.diapos, currentPantalla: this.indexPantalla, progress: this.progress});
     }
 
     resetUnit3() {
-        for (let i = 35; i < 37; i++) {
+        for (let i = 26; i < 35; i++) {
             this.progress[i][1] = true;
         }
-        for (let i = 7; i < 9; i++) {
+        for (let i = 15; i < 24; i++) {
             this.results[i].answersChecked = null;
             this.results[i].result = false;
         }
-        this.navTo(21);
+        this.navTo(2);
         this.cmiStore.results = this.results;
         this.cmiStore.progress = this.progress;
         let cmiStoreStr = JSON.stringify(this.cmiStore);
@@ -272,7 +289,7 @@ export class ScormStoreService {
     }
 
     passUnit3() {
-        this.progress[37][1] = false;
+        this.progress[35][1] = false;
         this.stateIn.next({menu: this.diapos, currentPantalla: this.indexPantalla, progress: this.progress});
     }
 

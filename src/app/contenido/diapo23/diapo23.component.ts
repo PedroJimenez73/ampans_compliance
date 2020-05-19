@@ -9,6 +9,7 @@ declare var $: any;
   templateUrl: './diapo23.component.html',
   styleUrls: ['./diapo23.component.scss']
 })
+
 export class Diapo23Component implements OnInit {
 
     showMensaje = false;
@@ -23,13 +24,16 @@ export class Diapo23Component implements OnInit {
     elementosInputsRef = [];
 
     pregunta = {
-        id: '9',
-        question: 'Ens traurem la mascareta rentant-nos les mans prèviament i agafant la mascareta per les tires sense tocar el teixit?',
+        id: '15',
+        question: 'Fer la higiene dels genitals d’una persona amb discapacitat sense autonomia per a realitzar-ho per si mateix.',
         answers: [
-            'Sí',
-            'No'
+            'Penal o Dubte ètic (cal consultar)',
+            'Correcte'
         ],
-        corrects: ['a']
+        corrects: ['b'],
+        feedback: [
+            'Es del tot correcte. Es part de la nostra feina.'
+        ]
     }
 
     constructor(private ff: FormBuilder,
@@ -37,6 +41,14 @@ export class Diapo23Component implements OnInit {
                 private scormStoreService: ScormStoreService) { }
 
     ngOnInit() {
+        const scrollToTop = window.setInterval(() => {
+            const pos = window.pageYOffset;
+            if (pos > 0) {
+                window.scrollTo(0, pos - 20);
+            } else {
+                window.clearInterval(scrollToTop);
+            }
+        }, 16);
         this.form = this.ff.group({
             answerRadio: ''
         });
@@ -48,14 +60,6 @@ export class Diapo23Component implements OnInit {
     }
 
     checkAnswer() {
-        const scrollToTop = window.setInterval(() => {
-        const pos = window.pageYOffset;
-            if (pos > 0) {
-                window.scrollTo(0, pos - 20); 
-            } else {
-                window.clearInterval(scrollToTop);
-            }
-        }, 16);
         this.showMensaje = true;
         this.lockInput = true;
         this.answersChecked[0] = this.form.get('answerRadio').value;

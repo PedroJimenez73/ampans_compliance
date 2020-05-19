@@ -9,6 +9,7 @@ declare var $: any;
   templateUrl: './diapo21.component.html',
   styleUrls: ['./diapo21.component.scss']
 })
+
 export class Diapo21Component implements OnInit {
 
     showMensaje = false;
@@ -23,13 +24,16 @@ export class Diapo21Component implements OnInit {
     elementosInputsRef = [];
 
     pregunta = {
-        id: '7',
-        question: 'L’ús generalitzat de mascaretes quirúrgiques i FFP2 ajuden a reduir el contagi del coronavirus?',
+        id: '13',
+        question: 'Ensenyar a una persona amb discapacitat amb el suport d’elements materials com es col·loca un preservatiu.',
         answers: [
-            'Sí',
-            'No'
+            'Penal o Dubte ètic (cal consultar)',
+            'Correcte'
         ],
-        corrects: ['a']
+        corrects: ['b'],
+        feedback: [
+            'És una activitat educativa, si es fa de manera correcta no hi pot haver-hi cap problema sinó al contrari.'
+        ]
     }
 
     constructor(private ff: FormBuilder,
@@ -38,9 +42,9 @@ export class Diapo21Component implements OnInit {
 
     ngOnInit() {
         const scrollToTop = window.setInterval(() => {
-        const pos = window.pageYOffset;
+            const pos = window.pageYOffset;
             if (pos > 0) {
-                window.scrollTo(0, pos - 20); 
+                window.scrollTo(0, pos - 20);
             } else {
                 window.clearInterval(scrollToTop);
             }

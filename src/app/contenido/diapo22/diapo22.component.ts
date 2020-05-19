@@ -9,6 +9,7 @@ declare var $: any;
   templateUrl: './diapo22.component.html',
   styleUrls: ['./diapo22.component.scss']
 })
+
 export class Diapo22Component implements OnInit {
 
     showMensaje = false;
@@ -23,13 +24,16 @@ export class Diapo22Component implements OnInit {
     elementosInputsRef = [];
 
     pregunta = {
-        id: '8',
-        question: 'Per rentar-nos les mans, ho hem de fer ràpid i sense fregar palmells?',
+        id: '14',
+        question: 'Facilitar l’exercici de la prostitució a persona amb discapacitat. ',
         answers: [
-            'Sí',
-            'No'
+            'Penal o Dubte ètic (cal consultar)',
+            'Correcte'
         ],
-        corrects: ['b']
+        corrects: ['a'],
+        feedback: [
+            'Independentment que pugui constituir un delicte penal. Facilitat l’exercici de la prostitució seria una gran negligència.'
+        ]
     }
 
     constructor(private ff: FormBuilder,
@@ -38,9 +42,9 @@ export class Diapo22Component implements OnInit {
 
     ngOnInit() {
         const scrollToTop = window.setInterval(() => {
-        const pos = window.pageYOffset;
+            const pos = window.pageYOffset;
             if (pos > 0) {
-                window.scrollTo(0, pos - 20); 
+                window.scrollTo(0, pos - 20);
             } else {
                 window.clearInterval(scrollToTop);
             }

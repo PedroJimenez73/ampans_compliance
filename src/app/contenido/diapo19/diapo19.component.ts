@@ -9,6 +9,7 @@ declare var $: any;
   templateUrl: './diapo19.component.html',
   styleUrls: ['./diapo19.component.scss']
 })
+
 export class Diapo19Component implements OnInit {
 
     showMensaje = false;
@@ -23,13 +24,16 @@ export class Diapo19Component implements OnInit {
     elementosInputsRef = [];
 
     pregunta = {
-        id: '5',
-        question: 'Pots venir a treballar si tens símptomes compatibles amb el coronavirus?',
+        id: '11',
+        question: 'Masturbar a una persona amb discapacitat que ho desitja i que per les seves limitacions físiques no pot realitzar-ho per si sol.',
         answers: [
-            'Sí',
-            'No'
+            'Penal o Dubte ètic (cal consultar)',
+            'Correcte'
         ],
-        corrects: ['b']
+        corrects: ['a'],
+        feedback: [
+            'La conducta a la qual fa referència la pregunta podria ser confosa amb abús. Independentment de l’anterior consideració la conducta que es descriu necessita de comunicar-se a AMPANS i reflexionar quina és la millor manera d’actuació i com.'
+        ]
     }
 
     constructor(private ff: FormBuilder,
@@ -38,9 +42,9 @@ export class Diapo19Component implements OnInit {
 
     ngOnInit() {
         const scrollToTop = window.setInterval(() => {
-        const pos = window.pageYOffset;
+            const pos = window.pageYOffset;
             if (pos > 0) {
-                window.scrollTo(0, pos - 20); 
+                window.scrollTo(0, pos - 20);
             } else {
                 window.clearInterval(scrollToTop);
             }

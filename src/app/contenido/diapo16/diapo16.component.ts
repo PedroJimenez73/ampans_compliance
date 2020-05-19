@@ -23,13 +23,16 @@ export class Diapo16Component implements OnInit {
     elementosInputsRef = [];
 
     pregunta = {
-        id: '2',
-        question: 'Els principals símptomes del coronavirus són: Febre, tos, sensació de falta d’aire i malestar general?',
+        id: '8',
+        question: 'Mantenir relacions de parella estables amb una persona amb discapacitat intel·lectual.',
         answers: [
-            'Sí',
-            'No'
+            'Penal o Dubte ètic (cal consultar)',
+            'Correcte'
         ],
-        corrects: ['a']
+        corrects: ['a'],
+        feedback: [
+            'Pot constituir un conflicte ètic i un risc penal. Abans de mantenir una relació sentimental consentida amb una persona amb discapacitat caldria conèixer la seva capacitat d’autodeterminació, saber el que pensen els tutors si n’hi ha i comunicar-ho a AMPANS en cas de ser-ne usuari/a.'
+        ]
     }
 
     constructor(private ff: FormBuilder,
@@ -38,9 +41,9 @@ export class Diapo16Component implements OnInit {
 
     ngOnInit() {
         const scrollToTop = window.setInterval(() => {
-        const pos = window.pageYOffset;
+            const pos = window.pageYOffset;
             if (pos > 0) {
-                window.scrollTo(0, pos - 20); 
+                window.scrollTo(0, pos - 20);
             } else {
                 window.clearInterval(scrollToTop);
             }

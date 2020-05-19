@@ -9,6 +9,7 @@ declare var $: any;
   templateUrl: './diapo18.component.html',
   styleUrls: ['./diapo18.component.scss']
 })
+
 export class Diapo18Component implements OnInit {
 
     showMensaje = false;
@@ -23,13 +24,16 @@ export class Diapo18Component implements OnInit {
     elementosInputsRef = [];
 
     pregunta = {
-        id: '4',
-        question: 'Si tens una patologia cardiovascular ets una persona vulnerable pel coronavirus?',
+        id: '10',
+        question: 'Permetre que dues persones amb discapacitat intel·lectual mantinguin relacions homosexuals consentides.',
         answers: [
-            'Sí',
-            'No'
+            'Penal o Dubte ètic (cal consultar)',
+            'Correcte'
         ],
-        corrects: ['a']
+        corrects: ['b'],
+        feedback: [
+            'No hi ha cap problema.'
+        ]
     }
 
     constructor(private ff: FormBuilder,
@@ -38,9 +42,9 @@ export class Diapo18Component implements OnInit {
 
     ngOnInit() {
         const scrollToTop = window.setInterval(() => {
-        const pos = window.pageYOffset;
+            const pos = window.pageYOffset;
             if (pos > 0) {
-                window.scrollTo(0, pos - 20); 
+                window.scrollTo(0, pos - 20);
             } else {
                 window.clearInterval(scrollToTop);
             }
