@@ -1,0 +1,40 @@
+<div appScroll class="contenedor condicional">
+    <div class="row">
+        <div class="col-100">
+            <div class="actividades mostrada">
+                <h3>Resum d’autoavaluació</h3>
+                <hr>
+                <div style="display: flex; margin: 0; padding: 0;">
+                    <div class="col-50 columna">
+                        <div class="resultado" *ngFor="let result of results; let i = index">
+                            <span *ngIf="result"><img src="assets/img/iconos/check-circle.svg"></span>
+                            <span *ngIf="!result"><img src="assets/img/iconos/x-circle.svg"></span>
+                            <div>
+                                <p>PREGUNTA {{i + 1}}</p>
+                                <p *ngIf="result">Correcta </p>
+                                <p *ngIf="!result">Incorrecta </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-50 doble-centrada chart-container">
+                        <canvas baseChart
+                                [data]="doughnutChartData"
+                                [labels]="doughnutChartLabels"
+                                [options]="doughnutChartOptions"
+                                [chartType]="doughnutChartType"
+                                [colors]="doughnutChartColors">
+                        </canvas>
+                    </div>
+                </div>
+                <div class="mensaje-final">
+                    <p class="pass" *ngIf="pass">{{mensaje}}</p>
+                    <p class="not-pass" *ngIf="!pass">{{mensaje}}</p>
+                    <!-- <button *ngIf="!pass" class="outline" (click)="reset()">Repassar</button> -->
+                </div>
+                <!-- <div style="margin-top: 20px; display: flex; justify-content: space-between; align-items: center;">
+                    <button class="outline" (click)="reset()">Repassar</button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+</div>

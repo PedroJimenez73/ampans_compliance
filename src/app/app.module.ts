@@ -51,6 +51,49 @@ import { Diapo38Component } from './contenido/diapo38/diapo38.component';
 import { Diapo39Component } from './contenido/diapo39/diapo39.component';
 import { Diapo40Component } from './contenido/diapo40/diapo40.component';
 import { Diapo29Component } from './contenido/diapo29/diapo29.component';
+import { Diapo41Component } from './contenido/diapo41/diapo41.component';
+import { Diapo42Component } from './contenido/diapo42/diapo42.component';
+import { Diapo43Component } from './contenido/diapo43/diapo43.component';
+import { Diapo44Component } from './contenido/diapo44/diapo44.component';
+import { Diapo45Component } from './contenido/diapo45/diapo45.component';
+import { Diapo46Component } from './contenido/diapo46/diapo46.component';
+import { Diapo47Component } from './contenido/diapo47/diapo47.component';
+import { Diapo48Component } from './contenido/diapo48/diapo48.component';
+import { Diapo49Component } from './contenido/diapo49/diapo49.component';
+import { Diapo50Component } from './contenido/diapo50/diapo50.component';
+import { Diapo51Component } from './contenido/diapo51/diapo51.component';
+import { Diapo52Component } from './contenido/diapo52/diapo52.component';
+import { Diapo53Component } from './contenido/diapo53/diapo53.component';
+import { Diapo54Component } from './contenido/diapo54/diapo54.component';
+import { Diapo55Component } from './contenido/diapo55/diapo55.component';
+import { Diapo56Component } from './contenido/diapo56/diapo56.component';
+import { Diapo57Component } from './contenido/diapo57/diapo57.component';
+import { Diapo58Component } from './contenido/diapo58/diapo58.component';
+import { Diapo59Component } from './contenido/diapo59/diapo59.component';
+import { Diapo60Component } from './contenido/diapo60/diapo60.component';
+import { Diapo61Component } from './contenido/diapo61/diapo61.component';
+import { Diapo62Component } from './contenido/diapo62/diapo62.component';
+import { Diapo63Component } from './contenido/diapo63/diapo63.component';
+import { Diapo64Component } from './contenido/diapo64/diapo64.component';
+import { Diapo65Component } from './contenido/diapo65/diapo65.component';
+import { Diapo66Component } from './contenido/diapo66/diapo66.component';
+import { Diapo67Component } from './contenido/diapo67/diapo67.component';
+import { Diapo68Component } from './contenido/diapo68/diapo68.component';
+import { Diapo69Component } from './contenido/diapo69/diapo69.component';
+import { Diapo70Component } from './contenido/diapo70/diapo70.component';
+import { Diapo71Component } from './contenido/diapo71/diapo71.component';
+import { Diapo72Component } from './contenido/diapo72/diapo72.component';
+import { Diapo73Component } from './contenido/diapo73/diapo73.component';
+import { Diapo74Component } from './contenido/diapo74/diapo74.component';
+import { Diapo75Component } from './contenido/diapo75/diapo75.component';
+import { Diapo76Component } from './contenido/diapo76/diapo76.component';
+import { Diapo77Component } from './contenido/diapo77/diapo77.component';
+import { Diapo78Component } from './contenido/diapo78/diapo78.component';
+import { Diapo79Component } from './contenido/diapo79/diapo79.component';
+import { Diapo80Component } from './contenido/diapo80/diapo80.component';
+import { Diapo81Component } from './contenido/diapo81/diapo81.component';
+import { Diapo82Component } from './contenido/diapo82/diapo82.component';
+import { Diapo83Component } from './contenido/diapo83/diapo83.component';
 
 @NgModule({
   declarations: [
@@ -101,6 +144,49 @@ import { Diapo29Component } from './contenido/diapo29/diapo29.component';
     Diapo38Component,
     Diapo39Component,
     Diapo40Component,
+    Diapo41Component,
+    Diapo42Component,
+    Diapo43Component,
+    Diapo44Component,
+    Diapo45Component,
+    Diapo46Component,
+    Diapo47Component,
+    Diapo48Component,
+    Diapo49Component,
+    Diapo50Component,
+    Diapo51Component,
+    Diapo52Component,
+    Diapo53Component,
+    Diapo54Component,
+    Diapo55Component,
+    Diapo56Component,
+    Diapo57Component,
+    Diapo58Component,
+    Diapo59Component,
+    Diapo60Component,
+    Diapo61Component,
+    Diapo62Component,
+    Diapo63Component,
+    Diapo64Component,
+    Diapo65Component,
+    Diapo66Component,
+    Diapo67Component,
+    Diapo68Component,
+    Diapo69Component,
+    Diapo70Component,
+    Diapo71Component,
+    Diapo72Component,
+    Diapo73Component,
+    Diapo74Component,
+    Diapo75Component,
+    Diapo76Component,
+    Diapo77Component,
+    Diapo78Component,
+    Diapo79Component,
+    Diapo80Component,
+    Diapo81Component,
+    Diapo82Component,
+    Diapo83Component,
   ],
   imports: [
     BrowserModule,
@@ -153,6 +239,51 @@ import { Diapo29Component } from './contenido/diapo29/diapo29.component';
     Diapo38Component,
     Diapo39Component,
     Diapo40Component,
+    Diapo40Component,
+    Diapo41Component,
+    Diapo42Component,
+    Diapo43Component,
+    Diapo44Component,
+    Diapo45Component,
+    Diapo46Component,
+    Diapo47Component,
+    Diapo48Component,
+    Diapo49Component,
+    Diapo50Component,
+    Diapo51Component,
+    Diapo52Component,
+    Diapo53Component,
+    Diapo54Component,
+    Diapo55Component,
+    Diapo56Component,
+    Diapo57Component,
+    Diapo58Component,
+    Diapo59Component,
+    Diapo60Component,
+    Diapo61Component,
+    Diapo62Component,
+    Diapo63Component,
+    Diapo64Component,
+    Diapo65Component,
+    Diapo66Component,
+    Diapo67Component,
+    Diapo68Component,
+    Diapo69Component,
+    Diapo70Component,
+    Diapo71Component,
+    Diapo72Component,
+    Diapo73Component,
+    Diapo74Component,
+    Diapo75Component,
+    Diapo75Component,
+    Diapo76Component,
+    Diapo77Component,
+    Diapo78Component,
+    Diapo79Component,
+    Diapo80Component,
+    Diapo81Component,
+    Diapo82Component,
+    Diapo83Component,
   ]
 })
 export class AppModule { }

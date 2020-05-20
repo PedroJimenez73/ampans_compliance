@@ -1,0 +1,41 @@
+<div appScroll class="contenedor condicional">
+    <div class="row">
+        <div class="col-100">
+            <p class="instructions">A continuació has de completar 6 preguntes, sent necessari contestar correctament més de l'50% per passar a el següent conjunt de preguntes.</p>
+            <p>Marca si la conducta que es descriu és: un delicte penal o una conducta que comporta algun dubte ètic (que hauríem de consultar dins AMPANS) o si la conducta és correcte.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-100">
+            <div class="actividades mostrada" id="actividad-1">
+                <h3>{{pregunta.id}} {{pregunta.question}}</h3>
+                <hr>
+                <form [formGroup]="form">
+                    <label #labelsRef class="respuesta" *ngFor="let answer of pregunta.answers; let i = index">
+                        <input #inputsRef class="m-r-small" type="radio" formControlName="answerRadio" value="{{abcAnswers[i]}}">
+                            {{abcAnswers[i]}}. {{answer}} 
+                            <img class="incorrecta" src="assets/img/iconos/x-circle.svg" alt="">
+                            <img class="correcta" src="assets/img/iconos/check-circle.svg" alt="">
+                    </label>
+                </form>
+                <div class="col-100" style="margin-top: 1rem; display: flex; justify-content: center;">
+                    <span *ngIf="showMensaje && result === true" class="mensaje verdadero">La resposta és correcta, continua a la següent!</span>
+                    <span *ngIf="showMensaje && result === false" class="mensaje falso">Ho sentim, la resposta no és correcta, continua a la següent.</span>
+                    <button *ngIf="!showMensaje" class="outline" (click)="setAnswer()">Comprovar resposta</button>
+                </div>
+                <hr>
+                <div *ngIf="showMensaje" class="col-100">
+                    <p *ngFor="let linea of pregunta.feedback">{{linea}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="overlay" id="overlay"></div>
+<div id="modal-resume">
+    <span (click)="toggleResumeModal()">&times;</span>
+    <p>Has de completar l'activitat i prémer en comprovar resposta abans d'accedir a la següent activitat.</p>
+    <div>
+        <button (click)="toggleResumeModal()">Acceptar</button>
+    </div>
+</div>

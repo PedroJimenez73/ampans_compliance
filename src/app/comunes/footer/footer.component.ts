@@ -90,6 +90,118 @@ export class FooterComponent implements OnInit {
                 this.scormStoreService.passUnit3();
             }
         }
+        if(this.pantallaIndex === 43) {
+            this.results = [];
+            this.totalAciertos = 0;
+            for (let i = 24; i < 32; i ++) {
+                this.results.push(this.scormStoreService.getResults()[i].result)
+            }
+            this.results.forEach(elem => {
+                if(elem) {
+                    this.totalAciertos++;
+                }
+            });
+            this.porcentAciertos = Math.round((this.totalAciertos / this.results.length) * 100);
+            if(this.porcentAciertos >= 50) {
+                this.scormStoreService.passUnit4();
+            }
+        }
+        if(this.pantallaIndex === 49) {
+            this.results = [];
+            this.totalAciertos = 0;
+            for (let i = 32; i < 37; i ++) {
+                this.results.push(this.scormStoreService.getResults()[i].result)
+            }
+            this.results.forEach(elem => {
+                if(elem) {
+                    this.totalAciertos++;
+                }
+            });
+            this.porcentAciertos = Math.round((this.totalAciertos / this.results.length) * 100);
+            if(this.porcentAciertos >= 50) {
+                this.scormStoreService.passUnit5();
+            }
+        }
+        if(this.pantallaIndex === 54) {
+            this.results = [];
+            this.totalAciertos = 0;
+            for (let i = 37; i < 41; i ++) {
+                this.results.push(this.scormStoreService.getResults()[i].result)
+            }
+            this.results.forEach(elem => {
+                if(elem) {
+                    this.totalAciertos++;
+                }
+            });
+            this.porcentAciertos = Math.round((this.totalAciertos / this.results.length) * 100);
+            if(this.porcentAciertos >= 50) {
+                this.scormStoreService.passUnit6();
+            }
+        }
+        if(this.pantallaIndex === 65) {
+            this.results = [];
+            this.totalAciertos = 0;
+            for (let i = 41; i < 51; i ++) {
+                this.results.push(this.scormStoreService.getResults()[i].result)
+            }
+            this.results.forEach(elem => {
+                if(elem) {
+                    this.totalAciertos++;
+                }
+            });
+            this.porcentAciertos = Math.round((this.totalAciertos / this.results.length) * 100);
+            if(this.porcentAciertos >= 50) {
+                this.scormStoreService.passUnit7();
+            }
+        }
+        if(this.pantallaIndex === 72) {
+            this.results = [];
+            this.totalAciertos = 0;
+            for (let i = 51; i < 57; i ++) {
+                this.results.push(this.scormStoreService.getResults()[i].result)
+            }
+            this.results.forEach(elem => {
+                if(elem) {
+                    this.totalAciertos++;
+                }
+            });
+            this.porcentAciertos = Math.round((this.totalAciertos / this.results.length) * 100);
+            if(this.porcentAciertos >= 50) {
+                this.scormStoreService.passUnit8();
+            }
+        }
+        if(this.pantallaIndex === 77) {
+            this.results = [];
+            this.totalAciertos = 0;
+            for (let i = 57; i < 61; i ++) {
+                this.results.push(this.scormStoreService.getResults()[i].result)
+            }
+            this.results.forEach(elem => {
+                if(elem) {
+                    this.totalAciertos++;
+                }
+            });
+            this.porcentAciertos = Math.round((this.totalAciertos / this.results.length) * 100);
+            if(this.porcentAciertos >= 50) {
+                this.scormStoreService.passUnit9();
+            }
+        }
+        if(this.pantallaIndex === 82) {
+            this.results = [];
+            this.totalAciertos = 0;
+            for (let i = 61; i < 65; i ++) {
+                this.results.push(this.scormStoreService.getResults()[i].result)
+            }
+            this.results.forEach(elem => {
+                if(elem) {
+                    this.totalAciertos++;
+                }
+            });
+            this.porcentAciertos = Math.round((this.totalAciertos / this.results.length) * 100);
+            if(this.porcentAciertos >= 50) {
+                this.scormStoreService.passUnit10();
+            }
+        }
         this.scormStoreService.nextPantalla()
     }
 

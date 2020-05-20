@@ -4,8 +4,8 @@ import { BehaviorSubject, Observable } from 'rxjs';
 declare var window: any;
 
 class result  {
-    answersChecked: any;
-    result: boolean;
+    aC: any;  // optimizado de answerChecked
+    result: boolean; // optimizado de resul
 }
 
 @Injectable({
@@ -21,8 +21,8 @@ export class ScormStoreService {
         {text:"Per què aquesta formació",class:"regular", menu: true, question: false, page: null},
         {text:"Com puc saber els valors ètics?",class:"regular", menu: true, question: false, page: null},
         {text:"On puc comunicar una situació o fets que poden implicar un risc o una vulneració de les normes legals o de la nostra ètica?",class:"regular", menu: true, question: false, page: null},
-        // {text:"Riscos penals I",class:"regular", menu: true, question: true, page: null},
-        {text:"Riscos penals I",class:"regular", menu: true, question: false, page: null},
+        {text:"Riscos penals I",class:"regular", menu: true, question: true, page: null},
+        // {text:"Riscos penals I",class:"regular", menu: true, question: false, page: null},
         {text:"Riscos penals II",class:"regular", menu: true, question: false, page: null},
         {text:"Exercicis generals",class:"regular", menu: true, question: true, page: null}, // 9
         {text:"Exercicis generals",class:"regular", menu: false, question: true, page: null},
@@ -60,6 +60,46 @@ export class ScormStoreService {
         {text:"Exercicis d’violació de la intimitat i violació informàtica",class:"regular", menu: false, question: true, page: null},
         {text:"Exercicis d’violació de la intimitat i violació informàtica",class:"regular", menu: false, question: true, page: null},
         {text:"Resum d’exercicis d’violació de la intimitat i violació informàtica",class:"regular", menu: true, question: true, page: null}, // 44
+        {text:"Exercicis d’elictes per danys informàtics i contra la propietat intel·lectual i industrial",class:"regular", menu: true, question: true, page: null}, // 45
+        {text:"Exercicis d’elictes per danys informàtics i contra la propietat intel·lectual i industrial",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis d’elictes per danys informàtics i contra la propietat intel·lectual i industrial",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis d’elictes per danys informàtics i contra la propietat intel·lectual i industrial",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis d’elictes per danys informàtics i contra la propietat intel·lectual i industrial",class:"regular", menu: false, question: true, page: null},
+        {text:"Resum d’exercicis d’elictes per danys informàtics i contra la propietat intel·lectual i industrial",class:"regular", menu: true, question: true, page: null}, // 50
+        {text:"Exercicis d'escobriment i revelació de secrets d’empresa",class:"regular", menu: true, question: true, page: null}, // 51
+        {text:"Exercicis d'escobriment i revelació de secrets d’empresa",class:"regular", menu: false, question: true, page: null}, 
+        {text:"Exercicis d'escobriment i revelació de secrets d’empresa",class:"regular", menu: false, question: true, page: null}, 
+        {text:"Exercicis d'escobriment i revelació de secrets d’empresa",class:"regular", menu: false, question: true, page: null}, 
+        {text:"Resum d’exercicis d'escobriment i revelació de secrets d’empresa",class:"regular", menu: true, question: true, page: null}, // 55
+        {text:"Exercicis d’elictes de corrupció en els negocis i suborn",class:"regular", menu: true, question: true, page: null}, // 56
+        {text:"Exercicis d’elictes de corrupció en els negocis i suborn",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis d’elictes de corrupció en els negocis i suborn",class:"regular", menu: false, question: true, page: null}, 
+        {text:"Exercicis d’elictes de corrupció en els negocis i suborn",class:"regular", menu: false, question: true, page: null}, 
+        {text:"Exercicis d’elictes de corrupció en els negocis i suborn",class:"regular", menu: false, question: true, page: null}, 
+        {text:"Exercicis d’elictes de corrupció en els negocis i suborn",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis d’elictes de corrupció en els negocis i suborn",class:"regular", menu: false, question: true, page: null}, 
+        {text:"Exercicis d’elictes de corrupció en els negocis i suborn",class:"regular", menu: false, question: true, page: null}, 
+        {text:"Exercicis d’elictes de corrupció en els negocis i suborn",class:"regular", menu: false, question: true, page: null}, 
+        {text:"Exercicis d’elictes de corrupció en els negocis i suborn",class:"regular", menu: false, question: true, page: null}, 
+        {text:"Resum d’exercicis d’elictes de corrupció en els negocis i suborn",class:"regular", menu: true, question: true, page: null}, // 66
+        {text:"Exercicis d’elictes contra el medi ambient",class:"regular", menu: true, question: true, page: null}, // 67
+        {text:"Exercicis d’elictes contra el medi ambient",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis d’elictes contra el medi ambient",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis d’elictes contra el medi ambient",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis d’elictes contra el medi ambient",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis d’elictes contra el medi ambient",class:"regular", menu: false, question: true, page: null},
+        {text:"Resum d’exercicis d’elictes contra el medi ambient",class:"regular", menu: true, question: true, page: null}, // 73
+        {text:"Exercicis d’estafes i publicitat enganyosa",class:"regular", menu: true, question: true, page: null}, // 74
+        {text:"Exercicis d’estafes i publicitat enganyosa",class:"regular", menu: false, question: true, page: null}, 
+        {text:"Exercicis d’estafes i publicitat enganyosa",class:"regular", menu: false, question: true, page: null}, 
+        {text:"Exercicis d’estafes i publicitat enganyosa",class:"regular", menu: false, question: true, page: null}, 
+        {text:"Resum d’exercicis d’estafes i publicitat enganyosa",class:"regular", menu: true, question: true, page: null}, // 78
+        {text:"Exercicis d’delictes contra la Hisenda Publica i contra la Seguretat Social",class:"regular", menu: true, question: true, page: null}, // 79
+        {text:"Exercicis d’delictes contra la Hisenda Publica i contra la Seguretat Social",class:"regular", menu: false, question: true, page: null}, 
+        {text:"Exercicis d’delictes contra la Hisenda Publica i contra la Seguretat Social",class:"regular", menu: false, question: true, page: null}, 
+        {text:"Exercicis d’delictes contra la Hisenda Publica i contra la Seguretat Social",class:"regular", menu: false, question: true, page: null}, 
+        {text:"Resum d’exercicis d’delictes contra la Hisenda Publica i contra la Seguretat Social",class:"regular", menu: true, question: true, page: null}, // 83
+        {text:"Resum final d’exercicis",class:"regular", menu: true, question: true, page: null}
     ];
 
     indexPantalla = 0;
@@ -79,7 +119,7 @@ export class ScormStoreService {
             this.diapos[i].page = i;
             this.progress.push([element.menu, element.question, false]);
             if(element.question === true) {
-                this.results.push({answersChecked: null, result: false});
+                this.results.push({aC: null, result: false});
             }
         });
         setTimeout(()=> {
@@ -141,8 +181,8 @@ export class ScormStoreService {
         return this.results;
     }
 
-    setResults(id, answersChecked, result) {
-        this.results[id - 1] = {answersChecked: answersChecked, result: result};
+    setResults(id, aC, result) {
+        this.results[id - 1] = {aC: aC, result: result};
         this.progress[this.indexPantalla][1] = false;
         this.stateIn.next({menu: this.diapos, currentPantalla: this.indexPantalla, progress: this.progress});
         this.cmiStore.results = this.results;
@@ -168,7 +208,7 @@ export class ScormStoreService {
 
     getAswersChecked(id) {
         if(this.results[id - 1] !== null) {
-            return this.results[id - 1].answersChecked;
+            return this.results[id - 1].aC;
         } else {
             return false
         }
@@ -189,7 +229,7 @@ export class ScormStoreService {
             this.progress[i][1] = true;
         }
         for (let i = 0; i < 4; i++) {
-            this.results[i].answersChecked = null;
+            this.results[i].aC = null;
             this.results[i].result = false;
         }
         this.navTo(2);
@@ -226,7 +266,7 @@ export class ScormStoreService {
             this.progress[i][1] = true;
         }
         for (let i = 4; i < 15; i++) {
-            this.results[i].answersChecked = null;
+            this.results[i].aC = null;
             this.results[i].result = false;
         }
         this.navTo(2);
@@ -261,7 +301,7 @@ export class ScormStoreService {
             this.progress[i][1] = true;
         }
         for (let i = 15; i < 24; i++) {
-            this.results[i].answersChecked = null;
+            this.results[i].aC = null;
             this.results[i].result = false;
         }
         this.navTo(2);
@@ -294,14 +334,14 @@ export class ScormStoreService {
     }
 
     resetUnit4() {
-        for (let i = 52; i < 53; i++) {
+        for (let i = 36; i < 44; i++) {
             this.progress[i][1] = true;
         }
-        for (let i = 9; i < 10; i++) {
-            this.results[i].answersChecked = null;
+        for (let i = 24; i < 32; i++) {
+            this.results[i].aC = null;
             this.results[i].result = false;
         }
-        this.navTo(38);
+        this.navTo(2);
         this.cmiStore.results = this.results;
         this.cmiStore.progress = this.progress;
         let cmiStoreStr = JSON.stringify(this.cmiStore);
@@ -326,19 +366,19 @@ export class ScormStoreService {
     }
 
     passUnit4() {
-        this.progress[53][1] = false;
+        this.progress[44][1] = false;
         this.stateIn.next({menu: this.diapos, currentPantalla: this.indexPantalla, progress: this.progress});
     }
 
     resetUnit5() {
-        for (let i = 59; i < 61; i++) {
+        for (let i = 45; i < 50; i++) {
             this.progress[i][1] = true;
         }
-        for (let i = 10; i < 12; i++) {
-            this.results[i].answersChecked = null;
+        for (let i = 32; i < 37; i++) {
+            this.results[i].aC = null;
             this.results[i].result = false;
         }
-        this.navTo(54);
+        this.navTo(2);
         this.cmiStore.results = this.results;
         this.cmiStore.progress = this.progress;
         let cmiStoreStr = JSON.stringify(this.cmiStore);
@@ -363,19 +403,19 @@ export class ScormStoreService {
     }
 
     passUnit5() {
-        this.progress[61][1] = false;
+        this.progress[50][1] = false;
         this.stateIn.next({menu: this.diapos, currentPantalla: this.indexPantalla, progress: this.progress});
     }
 
     resetUnit6() {
-        for (let i = 66; i < 68; i++) {
+        for (let i = 51; i < 55; i++) {
             this.progress[i][1] = true;
         }
-        for (let i = 12; i < 14; i++) {
-            this.results[i].answersChecked = null;
+        for (let i = 37; i < 41; i++) {
+            this.results[i].aC = null;
             this.results[i].result = false;
         }
-        this.navTo(62);
+        this.navTo(2);
         this.cmiStore.results = this.results;
         this.cmiStore.progress = this.progress;
         let cmiStoreStr = JSON.stringify(this.cmiStore);
@@ -400,19 +440,19 @@ export class ScormStoreService {
     }
 
     passUnit6() {
-        this.progress[68][1] = false;
+        this.progress[55][1] = false;
         this.stateIn.next({menu: this.diapos, currentPantalla: this.indexPantalla, progress: this.progress});
     }
 
     resetUnit7() {
-        for (let i = 78; i < 79; i++) {
+        for (let i = 55; i < 66; i++) {
             this.progress[i][1] = true;
         }
-        for (let i = 14; i < 15; i++) {
-            this.results[i].answersChecked = null;
+        for (let i = 41; i < 55; i++) {
+            this.results[i].aC = null;
             this.results[i].result = false;
         }
-        this.navTo(69);
+        this.navTo(2);
         this.cmiStore.results = this.results;
         this.cmiStore.progress = this.progress;
         let cmiStoreStr = JSON.stringify(this.cmiStore);
@@ -437,19 +477,19 @@ export class ScormStoreService {
     }
 
     passUnit7() {
-        this.progress[79][1] = false;
+        this.progress[66][1] = false;
         this.stateIn.next({menu: this.diapos, currentPantalla: this.indexPantalla, progress: this.progress});
     }
 
     resetUnit8() {
-        for (let i = 92; i < 93; i++) {
+        for (let i = 67; i < 73; i++) {
             this.progress[i][1] = true;
         }
-        for (let i = 15; i < 16; i++) {
-            this.results[i].answersChecked = null;
+        for (let i = 51; i < 57; i++) {
+            this.results[i].aC = null;
             this.results[i].result = false;
         }
-        this.navTo(80);
+        this.navTo(2);
         this.cmiStore.results = this.results;
         this.cmiStore.progress = this.progress;
         let cmiStoreStr = JSON.stringify(this.cmiStore);
@@ -474,19 +514,19 @@ export class ScormStoreService {
     }
 
     passUnit8() {
-        this.progress[93][1] = false;
+        this.progress[73][1] = false;
         this.stateIn.next({menu: this.diapos, currentPantalla: this.indexPantalla, progress: this.progress});
     }
 
     resetUnit9() {
-        for (let i = 106; i < 107; i++) {
+        for (let i = 74; i < 78; i++) {
             this.progress[i][1] = true;
         }
-        for (let i = 16; i < 17; i++) {
-            this.results[i].answersChecked = null;
+        for (let i = 57; i < 61; i++) {
+            this.results[i].aC = null;
             this.results[i].result = false;
         }
-        this.navTo(94);
+        this.navTo(2);
         this.cmiStore.results = this.results;
         this.cmiStore.progress = this.progress;
         let cmiStoreStr = JSON.stringify(this.cmiStore);
@@ -511,7 +551,44 @@ export class ScormStoreService {
     }
 
     passUnit9() {
-        this.progress[107][1] = false;
+        this.progress[78][1] = false;
+        this.stateIn.next({menu: this.diapos, currentPantalla: this.indexPantalla, progress: this.progress});
+    }
+
+    resetUnit10() {
+        for (let i = 79; i < 83; i++) {
+            this.progress[i][1] = true;
+        }
+        for (let i = 61; i < 65; i++) {
+            this.results[i].aC = null;
+            this.results[i].result = false;
+        }
+        this.navTo(2);
+        this.cmiStore.results = this.results;
+        this.cmiStore.progress = this.progress;
+        let cmiStoreStr = JSON.stringify(this.cmiStore);
+        window.ScormProcessSetValue("cmi.suspend_data", cmiStoreStr);
+        let totalAciertos = 0;
+        this.results.forEach((element) => {
+            if(element.result) {
+                totalAciertos++;
+            }
+        });
+        let score = Math.round((totalAciertos / this.results.length) * 100);
+        window.ScormProcessSetValue("cmi.core.score.raw", score);
+        window.ScormProcessSetValue("cmi.core.score.min", "0");
+        window.ScormProcessSetValue("cmi.core.score.max", "100");
+        if (score >= 50){
+            window.ScormProcessSetValue("cmi.core.lesson_status", "passed");
+        }
+        else{
+            window.ScormProcessSetValue("cmi.core.lesson_status", "failed");
+        }
+
+    }
+
+    passUnit10() {
+        this.progress[83][1] = false;
         this.stateIn.next({menu: this.diapos, currentPantalla: this.indexPantalla, progress: this.progress});
     }
 
@@ -522,7 +599,7 @@ export class ScormStoreService {
         this.diapos.forEach(element => {
             this.progress.push([element.menu, element.question, false]);
             if(element.question === true) {
-                this.results.push({answersChecked: null, result: false});
+                this.results.push({aC: null, result: false});
             }
         });
         this.stateIn.next({menu: this.diapos, currentPantalla: this.indexPantalla, progress: this.progress});

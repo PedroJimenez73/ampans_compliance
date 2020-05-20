@@ -3,12 +3,12 @@
         <div class="col-100">
             <div class="indice">
                 <div class="card" *ngFor="let item of menu; let i = index">
-                    <!-- <div class="lock" *ngIf="!item.learned && i !== 0">
+                    <div class="lock" *ngIf="!item.learned && i !== 0">
                         <h1>{{item.text}}</h1>
                         <img src="assets/img/iconos/pegatina-gris.svg" alt="">
                     </div>
-                    <div *ngIf="item.learned && i !== 0" (click)="navTo(item.page)"> -->
-                    <div (click)="navTo(item.page)">
+                    <div *ngIf="item.learned && i !== 0" (click)="navTo(item.page)">
+                    <!-- <div (click)="navTo(item.page)"> -->
                         <h1>{{item.text}}</h1>
                         <img src="assets/img/iconos/pegatina.svg" alt="">
                     </div>
