@@ -25,7 +25,7 @@ export class Diapo64Component implements OnInit {
 
     pregunta = {
         id: '51',
-        question: 'El responsable de compres selecciona  un proveïdor perquè pot facturar una part en negre i aleshores  tindria que pagar menys iva.',
+        question: 'El responsable de compres selecciona  un proveïdor perquè pot facturar una part en negre i aleshores  tindria que pagar menys IVA.',
         answers: [
             'Penal o Dubte ètic (cal consultar)',
             'Correcte'

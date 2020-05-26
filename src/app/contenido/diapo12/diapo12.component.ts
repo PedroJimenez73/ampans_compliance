@@ -40,9 +40,9 @@ export class Diapo12Component implements OnInit {
         });
         this.porcentAciertos = Math.round((this.totalAciertos / this.results.length) * 100);
         this.loadChartResultados();
-        if (this.porcentAciertos < 50) {
+        if (this.porcentAciertos < 80) {
 			this.mensaje = 'Ho sentim, no has superat les activitats. Pots prémer en repassar per estudiar de nou i tornar a contestar les preguntes.';
-		} else if (this.porcentAciertos >= 50) {
+		} else if (this.porcentAciertos >= 80) {
 			this.mensaje = 'Enhorabona, has superat les activitats! Prem Següent per continuar.';
 		}
     }
@@ -50,9 +50,9 @@ export class Diapo12Component implements OnInit {
     loadChartResultados() {
         let resto = 100 - this.porcentAciertos;
         let color;
-        if(this.porcentAciertos >= 50){
+        if(this.porcentAciertos >= 80){
             color = '#008489';
-        } else if (this.porcentAciertos >= 25){
+        } else if (this.porcentAciertos >= 50){
             color = '#ffb822';
         } else {
             color = '#8f0404';

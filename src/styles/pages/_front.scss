@@ -14,7 +14,7 @@
 
         p {
             font-family: $titles-font;
-            font-size: 2rem;
+            font-size: 3rem;
             color: white;
             padding: 0;
         }
@@ -24,5 +24,9 @@
 @media (max-width: $small-device) {
     .title {
         transform: none;
+
+        p {
+            font-size: 2rem;
+        }
     }
 }

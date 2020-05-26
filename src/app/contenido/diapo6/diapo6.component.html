@@ -5,7 +5,7 @@
             <p class="instructions" style="text-align: center;">Prem en el següent botó i llegeix detingudament el mateix.</p>
             <button *ngIf="!readed" class="mid" (click)="showModal()">LLEGIR EL CODI D’ÈTICA</button>
             <div style="display: flex; justify-content: center;">   
-                <span *ngIf="readed" class="pass">Ara ja pot continuar a la següent pantalla prement a Següent</span>
+                <span *ngIf="readed" class="pass">Ara ja pots continuar a la següent pantalla prement a Següent</span>
             </div>
         </div>
     </div>
@@ -15,7 +15,7 @@
     <img (click)="closeModal()" src="assets/img/iconos/x.svg" alt="">
 </div>
 <div #modal class="reader-modal">
-    <p class="instructions">Obri amb el ratolí per llegir tot el document, a l'acabar es mostrarà un botó que haurà de prémer per confirmar que l'ha llegit.</p>
+    <p class="instructions">Avança amb el ratolí per llegir tot el document. En acabar trobaràs un boto que hauràs de prémer per confirmar has llegit el document.</p>
     <img src="assets/img/codi/codi_1.png" alt="">
     <img src="assets/img/codi/codi_2.png" alt="">
     <img src="assets/img/codi/codi_3.png" alt="">

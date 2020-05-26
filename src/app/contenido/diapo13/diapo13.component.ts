@@ -31,7 +31,7 @@ export class Diapo13Component implements OnInit {
         ],
         corrects: ['b'],
         feedback: [
-            'Es correcte.'
+            'No hi ha cap problema en que una persona amb discapacitat tingui una parella sentimental.'
         ]
     }
 

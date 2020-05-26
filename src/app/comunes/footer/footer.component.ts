@@ -54,7 +54,7 @@ export class FooterComponent implements OnInit {
                 }
             });
             this.porcentAciertos = Math.round((this.totalAciertos / this.results.length) * 100);
-            if(this.porcentAciertos >= 50) {
+            if(this.porcentAciertos >= 80) {
                 this.scormStoreService.passUnit1();
             }
         }
@@ -70,7 +70,7 @@ export class FooterComponent implements OnInit {
                 }
             });
             this.porcentAciertos = Math.round((this.totalAciertos / this.results.length) * 100);
-            if(this.porcentAciertos >= 50) {
+            if(this.porcentAciertos >= 80) {
                 this.scormStoreService.passUnit2();
             }
         }
@@ -86,7 +86,7 @@ export class FooterComponent implements OnInit {
                 }
             });
             this.porcentAciertos = Math.round((this.totalAciertos / this.results.length) * 100);
-            if(this.porcentAciertos >= 50) {
+            if(this.porcentAciertos >= 80) {
                 this.scormStoreService.passUnit3();
             }
         }
@@ -102,7 +102,7 @@ export class FooterComponent implements OnInit {
                 }
             });
             this.porcentAciertos = Math.round((this.totalAciertos / this.results.length) * 100);
-            if(this.porcentAciertos >= 50) {
+            if(this.porcentAciertos >= 80) {
                 this.scormStoreService.passUnit4();
             }
         }
@@ -118,7 +118,7 @@ export class FooterComponent implements OnInit {
                 }
             });
             this.porcentAciertos = Math.round((this.totalAciertos / this.results.length) * 100);
-            if(this.porcentAciertos >= 50) {
+            if(this.porcentAciertos >= 80) {
                 this.scormStoreService.passUnit5();
             }
         }
@@ -134,7 +134,7 @@ export class FooterComponent implements OnInit {
                 }
             });
             this.porcentAciertos = Math.round((this.totalAciertos / this.results.length) * 100);
-            if(this.porcentAciertos >= 50) {
+            if(this.porcentAciertos >= 80) {
                 this.scormStoreService.passUnit6();
             }
         }
@@ -150,7 +150,7 @@ export class FooterComponent implements OnInit {
                 }
             });
             this.porcentAciertos = Math.round((this.totalAciertos / this.results.length) * 100);
-            if(this.porcentAciertos >= 50) {
+            if(this.porcentAciertos >= 80) {
                 this.scormStoreService.passUnit7();
             }
         }
@@ -166,7 +166,7 @@ export class FooterComponent implements OnInit {
                 }
             });
             this.porcentAciertos = Math.round((this.totalAciertos / this.results.length) * 100);
-            if(this.porcentAciertos >= 50) {
+            if(this.porcentAciertos >= 80) {
                 this.scormStoreService.passUnit8();
             }
         }
@@ -182,7 +182,7 @@ export class FooterComponent implements OnInit {
                 }
             });
             this.porcentAciertos = Math.round((this.totalAciertos / this.results.length) * 100);
-            if(this.porcentAciertos >= 50) {
+            if(this.porcentAciertos >= 80) {
                 this.scormStoreService.passUnit9();
             }
         }
@@ -198,7 +198,7 @@ export class FooterComponent implements OnInit {
                 }
             });
             this.porcentAciertos = Math.round((this.totalAciertos / this.results.length) * 100);
-            if(this.porcentAciertos >= 50) {
+            if(this.porcentAciertos >= 80) {
                 this.scormStoreService.passUnit10();
             }
         }

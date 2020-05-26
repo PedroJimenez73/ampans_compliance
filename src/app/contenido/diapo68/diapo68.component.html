@@ -18,7 +18,7 @@
                     <button *ngIf="!showMensaje" class="outline" (click)="setAnswer()">Comprovar resposta</button>
                 </div>
                 <hr>
-                <div *ngIf="showMensaje" class="col-100">
+                <div *ngIf="showMensaje && result === falses" class="col-100">
                     <p *ngFor="let linea of pregunta.feedback">{{linea}}</p>
                 </div>
             </div>

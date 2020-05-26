@@ -25,7 +25,7 @@ export class Diapo55Component implements OnInit {
 
     pregunta = {
         id: '42',
-        question: 'Expliquem l’organització i funcionament d’una planta de producció de bombetes on hi tenim un enclavament (grup de persones amb discapacitat que hi treballen) fent una feina continuada en el temps.',
+        question: 'El responsable d’una secció laboral fa un obsequi important al directiu d’una empresa que ens ha contractat els nostres serveis  per a totes les delegacions i oficines que tenen a Catalunya.',
         answers: [
             'Penal o Dubte ètic (cal consultar)',
             'Correcte'

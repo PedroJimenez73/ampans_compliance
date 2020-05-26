@@ -60,45 +60,45 @@ export class ScormStoreService {
         {text:"Exercicis d’violació de la intimitat i violació informàtica",class:"regular", menu: false, question: true, page: null},
         {text:"Exercicis d’violació de la intimitat i violació informàtica",class:"regular", menu: false, question: true, page: null},
         {text:"Resum d’exercicis d’violació de la intimitat i violació informàtica",class:"regular", menu: true, question: true, page: null}, // 44
-        {text:"Exercicis d’elictes per danys informàtics i contra la propietat intel·lectual i industrial",class:"regular", menu: true, question: true, page: null}, // 45
-        {text:"Exercicis d’elictes per danys informàtics i contra la propietat intel·lectual i industrial",class:"regular", menu: false, question: true, page: null},
-        {text:"Exercicis d’elictes per danys informàtics i contra la propietat intel·lectual i industrial",class:"regular", menu: false, question: true, page: null},
-        {text:"Exercicis d’elictes per danys informàtics i contra la propietat intel·lectual i industrial",class:"regular", menu: false, question: true, page: null},
-        {text:"Exercicis d’elictes per danys informàtics i contra la propietat intel·lectual i industrial",class:"regular", menu: false, question: true, page: null},
-        {text:"Resum d’exercicis d’elictes per danys informàtics i contra la propietat intel·lectual i industrial",class:"regular", menu: true, question: true, page: null}, // 50
+        {text:"Exercicis de delictes per danys informàtics i contra la propietat intel·lectual i industrial",class:"regular", menu: true, question: true, page: null}, // 45
+        {text:"Exercicis de delictes per danys informàtics i contra la propietat intel·lectual i industrial",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis de delictes per danys informàtics i contra la propietat intel·lectual i industrial",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis de delictes per danys informàtics i contra la propietat intel·lectual i industrial",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis de delictes per danys informàtics i contra la propietat intel·lectual i industrial",class:"regular", menu: false, question: true, page: null},
+        {text:"Resum d’exercicis de delictes per danys informàtics i contra la propietat intel·lectual i industrial",class:"regular", menu: true, question: true, page: null}, // 50
         {text:"Exercicis d'escobriment i revelació de secrets d’empresa",class:"regular", menu: true, question: true, page: null}, // 51
         {text:"Exercicis d'escobriment i revelació de secrets d’empresa",class:"regular", menu: false, question: true, page: null}, 
         {text:"Exercicis d'escobriment i revelació de secrets d’empresa",class:"regular", menu: false, question: true, page: null}, 
         {text:"Exercicis d'escobriment i revelació de secrets d’empresa",class:"regular", menu: false, question: true, page: null}, 
         {text:"Resum d’exercicis d'escobriment i revelació de secrets d’empresa",class:"regular", menu: true, question: true, page: null}, // 55
-        {text:"Exercicis d’elictes de corrupció en els negocis i suborn",class:"regular", menu: true, question: true, page: null}, // 56
-        {text:"Exercicis d’elictes de corrupció en els negocis i suborn",class:"regular", menu: false, question: true, page: null},
-        {text:"Exercicis d’elictes de corrupció en els negocis i suborn",class:"regular", menu: false, question: true, page: null}, 
-        {text:"Exercicis d’elictes de corrupció en els negocis i suborn",class:"regular", menu: false, question: true, page: null}, 
-        {text:"Exercicis d’elictes de corrupció en els negocis i suborn",class:"regular", menu: false, question: true, page: null}, 
-        {text:"Exercicis d’elictes de corrupció en els negocis i suborn",class:"regular", menu: false, question: true, page: null},
-        {text:"Exercicis d’elictes de corrupció en els negocis i suborn",class:"regular", menu: false, question: true, page: null}, 
-        {text:"Exercicis d’elictes de corrupció en els negocis i suborn",class:"regular", menu: false, question: true, page: null}, 
-        {text:"Exercicis d’elictes de corrupció en els negocis i suborn",class:"regular", menu: false, question: true, page: null}, 
-        {text:"Exercicis d’elictes de corrupció en els negocis i suborn",class:"regular", menu: false, question: true, page: null}, 
-        {text:"Resum d’exercicis d’elictes de corrupció en els negocis i suborn",class:"regular", menu: true, question: true, page: null}, // 66
-        {text:"Exercicis d’elictes contra el medi ambient",class:"regular", menu: true, question: true, page: null}, // 67
-        {text:"Exercicis d’elictes contra el medi ambient",class:"regular", menu: false, question: true, page: null},
-        {text:"Exercicis d’elictes contra el medi ambient",class:"regular", menu: false, question: true, page: null},
-        {text:"Exercicis d’elictes contra el medi ambient",class:"regular", menu: false, question: true, page: null},
-        {text:"Exercicis d’elictes contra el medi ambient",class:"regular", menu: false, question: true, page: null},
-        {text:"Exercicis d’elictes contra el medi ambient",class:"regular", menu: false, question: true, page: null},
-        {text:"Resum d’exercicis d’elictes contra el medi ambient",class:"regular", menu: true, question: true, page: null}, // 73
+        {text:"Exercicis de delictes de corrupció en els negocis i suborn",class:"regular", menu: true, question: true, page: null}, // 56
+        {text:"Exercicis de delictes de corrupció en els negocis i suborn",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis de delictes de corrupció en els negocis i suborn",class:"regular", menu: false, question: true, page: null}, 
+        {text:"Exercicis de delictes de corrupció en els negocis i suborn",class:"regular", menu: false, question: true, page: null}, 
+        {text:"Exercicis de delictes de corrupció en els negocis i suborn",class:"regular", menu: false, question: true, page: null}, 
+        {text:"Exercicis de delictes de corrupció en els negocis i suborn",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis de delictes de corrupció en els negocis i suborn",class:"regular", menu: false, question: true, page: null}, 
+        {text:"Exercicis de delictes de corrupció en els negocis i suborn",class:"regular", menu: false, question: true, page: null}, 
+        {text:"Exercicis de delictes de corrupció en els negocis i suborn",class:"regular", menu: false, question: true, page: null}, 
+        {text:"Exercicis de delictes de corrupció en els negocis i suborn",class:"regular", menu: false, question: true, page: null}, 
+        {text:"Resum d’exercicis de delictes de corrupció en els negocis i suborn",class:"regular", menu: true, question: true, page: null}, // 66
+        {text:"Exercicis de delictes contra el medi ambient",class:"regular", menu: true, question: true, page: null}, // 67
+        {text:"Exercicis de delictes contra el medi ambient",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis de delictes contra el medi ambient",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis de delictes contra el medi ambient",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis de delictes contra el medi ambient",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis de delictes contra el medi ambient",class:"regular", menu: false, question: true, page: null},
+        {text:"Resum d’exercicis de delictes contra el medi ambient",class:"regular", menu: true, question: true, page: null}, // 73
         {text:"Exercicis d’estafes i publicitat enganyosa",class:"regular", menu: true, question: true, page: null}, // 74
         {text:"Exercicis d’estafes i publicitat enganyosa",class:"regular", menu: false, question: true, page: null}, 
         {text:"Exercicis d’estafes i publicitat enganyosa",class:"regular", menu: false, question: true, page: null}, 
         {text:"Exercicis d’estafes i publicitat enganyosa",class:"regular", menu: false, question: true, page: null}, 
         {text:"Resum d’exercicis d’estafes i publicitat enganyosa",class:"regular", menu: true, question: true, page: null}, // 78
-        {text:"Exercicis d’delictes contra la Hisenda Publica i contra la Seguretat Social",class:"regular", menu: true, question: true, page: null}, // 79
-        {text:"Exercicis d’delictes contra la Hisenda Publica i contra la Seguretat Social",class:"regular", menu: false, question: true, page: null}, 
-        {text:"Exercicis d’delictes contra la Hisenda Publica i contra la Seguretat Social",class:"regular", menu: false, question: true, page: null}, 
-        {text:"Exercicis d’delictes contra la Hisenda Publica i contra la Seguretat Social",class:"regular", menu: false, question: true, page: null}, 
-        {text:"Resum d’exercicis d’delictes contra la Hisenda Publica i contra la Seguretat Social",class:"regular", menu: true, question: true, page: null}, // 83
+        {text:"Exercicis de delictes contra la Hisenda Publica i contra la Seguretat Social",class:"regular", menu: true, question: true, page: null}, // 79
+        {text:"Exercicis de delictes contra la Hisenda Publica i contra la Seguretat Social",class:"regular", menu: false, question: true, page: null}, 
+        {text:"Exercicis de delictes contra la Hisenda Publica i contra la Seguretat Social",class:"regular", menu: false, question: true, page: null}, 
+        {text:"Exercicis de delictes contra la Hisenda Publica i contra la Seguretat Social",class:"regular", menu: false, question: true, page: null}, 
+        {text:"Resum d’exercicis de delictes contra la Hisenda Publica i contra la Seguretat Social",class:"regular", menu: true, question: true, page: null}, // 83
         {text:"Resum final d’exercicis",class:"regular", menu: true, question: true, page: null}
     ];
 

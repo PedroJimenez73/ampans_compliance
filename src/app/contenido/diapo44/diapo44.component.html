@@ -1,7 +1,7 @@
 <div appScroll class="contenedor condicional">
     <div class="row">
         <div class="col-100">
-            <p class="instructions">A continuació has de completar 5 preguntes, sent necessari contestar correctament més de l'50% per passar a el següent conjunt de preguntes.</p>
+            <p class="instructions">A continuació has de completar 5 preguntes, cal que responguis correctament més del 80% per poder avançar:</p>
             <p>Marca si la conducta que es descriu és: un delicte penal o una conducta que comporta algun dubte ètic (que hauríem de consultar dins AMPANS) o si la conducta és correcte.</p>
         </div>
     </div>
@@ -24,7 +24,7 @@
                     <button *ngIf="!showMensaje" class="outline" (click)="setAnswer()">Comprovar resposta</button>
                 </div>
                 <hr>
-                <div *ngIf="showMensaje" class="col-100">
+                <div *ngIf="showMensaje && result === false" class="col-100">
                     <p *ngFor="let linea of pregunta.feedback">{{linea}}</p>
                 </div>
             </div>
