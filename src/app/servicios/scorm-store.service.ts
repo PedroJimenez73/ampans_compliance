@@ -29,18 +29,18 @@ export class ScormStoreService {
         {text:"Exercicis generals",class:"regular", menu: false, question: true, page: null},
         {text:"Exercicis generals",class:"regular", menu: false, question: true, page: null}, 
         {text:"Resum d’exercicis generals",class:"regular", menu: true, question: true, page: null}, // 13
-        {text:"Exercicis d’activitat relatives  a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat", class:"regular", menu: true, question: true, page: null}, // 14
-        {text:"Exercicis d’activitat relatives  a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat", class:"regular", menu: false, question: true, page: null},
-        {text:"Exercicis d’activitat relatives  a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat", class:"regular", menu: false, question: true, page: null},
-        {text:"Exercicis d’activitat relatives  a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat", class:"regular", menu: false, question: true, page: null},
-        {text:"Exercicis d’activitat relatives  a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat", class:"regular", menu: false, question: true, page: null},
-        {text:"Exercicis d’activitat relatives  a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat", class:"regular", menu: false, question: true, page: null},
-        {text:"Exercicis d’activitat relatives  a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat", class:"regular", menu: false, question: true, page: null},
-        {text:"Exercicis d’activitat relatives  a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat", class:"regular", menu: false, question: true, page: null},
-        {text:"Exercicis d’activitat relatives  a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat", class:"regular", menu: false, question: true, page: null},
-        {text:"Exercicis d’activitat relatives  a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat", class:"regular", menu: false, question: true, page: null},
-        {text:"Exercicis d’activitat relatives  a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat", class:"regular", menu: false, question: true, page: null},
-        {text:"Resum d’exercicis d’activitat relatives a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat",class:"regular", menu: true, question: true, page: null}, // 25
+        {text:"Exercicis d’activitats relatives  a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat", class:"regular", menu: true, question: true, page: null}, // 14
+        {text:"Exercicis d’activitats relatives  a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat", class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis d’activitats relatives  a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat", class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis d’activitats relatives  a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat", class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis d’activitats relatives  a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat", class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis d’activitats relatives  a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat", class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis d’activitats relatives  a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat", class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis d’activitats relatives  a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat", class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis d’activitats relatives  a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat", class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis d’activitats relatives  a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat", class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis d’activitats relatives  a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat", class:"regular", menu: false, question: true, page: null},
+        {text:"Resum d’exercicis d’activitats relatives a la prostitució, explotació sexual i corrupció de menors o persones amb discapacitat",class:"regular", menu: true, question: true, page: null}, // 25
         {text:"Exercicis d’maltractament",class:"regular", menu: true, question: true, page: null}, // 26
         {text:"Exercicis d’maltractament",class:"regular", menu: false, question: true, page: null},
         {text:"Exercicis d’maltractament",class:"regular", menu: false, question: true, page: null},
@@ -51,15 +51,15 @@ export class ScormStoreService {
         {text:"Exercicis d’maltractament",class:"regular", menu: false, question: true, page: null},
         {text:"Exercicis d’maltractament",class:"regular", menu: false, question: true, page: null},
         {text:"Resum d’exercicis d’maltractament",class:"regular", menu: true, question: true, page: null}, // 35
-        {text:"Exercicis d’violació de la intimitat i violació informàtica",class:"regular", menu: true, question: true, page: null}, // 36
-        {text:"Exercicis d’violació de la intimitat i violació informàtica",class:"regular", menu: false, question: true, page: null},
-        {text:"Exercicis d’violació de la intimitat i violació informàtica",class:"regular", menu: false, question: true, page: null},
-        {text:"Exercicis d’violació de la intimitat i violació informàtica",class:"regular", menu: false, question: true, page: null},
-        {text:"Exercicis d’violació de la intimitat i violació informàtica",class:"regular", menu: false, question: true, page: null},
-        {text:"Exercicis d’violació de la intimitat i violació informàtica",class:"regular", menu: false, question: true, page: null},
-        {text:"Exercicis d’violació de la intimitat i violació informàtica",class:"regular", menu: false, question: true, page: null},
-        {text:"Exercicis d’violació de la intimitat i violació informàtica",class:"regular", menu: false, question: true, page: null},
-        {text:"Resum d’exercicis d’violació de la intimitat i violació informàtica",class:"regular", menu: true, question: true, page: null}, // 44
+        {text:"Exercicis de violació de la intimitat i violació informàtica",class:"regular", menu: true, question: true, page: null}, // 36
+        {text:"Exercicis de violació de la intimitat i violació informàtica",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis de violació de la intimitat i violació informàtica",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis de violació de la intimitat i violació informàtica",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis de violació de la intimitat i violació informàtica",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis de violació de la intimitat i violació informàtica",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis de violació de la intimitat i violació informàtica",class:"regular", menu: false, question: true, page: null},
+        {text:"Exercicis de violació de la intimitat i violació informàtica",class:"regular", menu: false, question: true, page: null},
+        {text:"Resum d’exercicis de violació de la intimitat i violació informàtica",class:"regular", menu: true, question: true, page: null}, // 44
         {text:"Exercicis de delictes per danys informàtics i contra la propietat intel·lectual i industrial",class:"regular", menu: true, question: true, page: null}, // 45
         {text:"Exercicis de delictes per danys informàtics i contra la propietat intel·lectual i industrial",class:"regular", menu: false, question: true, page: null},
         {text:"Exercicis de delictes per danys informàtics i contra la propietat intel·lectual i industrial",class:"regular", menu: false, question: true, page: null},

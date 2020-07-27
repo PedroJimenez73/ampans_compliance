@@ -60,7 +60,7 @@
                 <div style="width: 100%; margin-top: 20px; display: flex; justify-content: space-between; align-items: center;">
                     <p style="font-size: 18px; padding: 10px 0;">{{mensaje}}</p>
                 </div>
-                <div *ngIf="porcentAciertos < 50" style="width: 100%; margin-top: 20px; display: flex; justify-content: space-between; align-items: center;">
+                <div *ngIf="porcentAciertos < 80" style="width: 100%; margin-top: 20px; display: flex; justify-content: space-between; align-items: center;">
                     <button class="outline" (click)="reset()">Repassar</button>
                 </div>
             </div>
